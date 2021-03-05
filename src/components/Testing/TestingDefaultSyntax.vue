@@ -41,7 +41,7 @@ export default defineComponent({
     },
   },
   data: () => ({
-    testData: 'vue2-syntax',
+    testData: 'vue-default-syntax',
     num: 1,
     bool: false,
     arr: ['a', 'b', 'c'],
@@ -71,22 +71,22 @@ export default defineComponent({
     },
   },
   beforeCreate() {
-    console.log('🦊 vue2-syntax/beforeCreate', this.$root, this.$route)
+    console.log('🦊 vue-default-syntax/beforeCreate', this.$root, this.$route)
   },
   created() {
-    console.log('🦊 vue2-syntax/created', this.$root, this.$route)
+    console.log('🦊 vue-default-syntax/created', this.$root, this.$route)
   },
   beforeMount() {
-    console.log('🦊 vue2-syntax/beforeMount', this.$root, this.$route)
+    console.log('🦊 vue-default-syntax/beforeMount', this.$root, this.$route)
   },
   mounted() {
-    console.log('🦊 vue2-syntax/mounted', this.$root, this.$route)
+    console.log('🦊 vue-default-syntax/mounted', this.$root, this.$route)
   },
   beforeUnmount() {
-    console.log('🦊 vue2-syntax/beforeUnmount (beforeDestoy)', this.$root, this.$route)
+    console.log('🦊 vue-default-syntax/beforeUnmount (beforeDestoy)', this.$root, this.$route)
   },
   unmounted() {
-    console.log('🦊 vue2-syntax/unmounted (destroyed)', this.$root, this.$route)
+    console.log('🦊 vue-default-syntax/unmounted (destroyed)', this.$root, this.$route)
   },
   methods: {
     toggleBtn() {
