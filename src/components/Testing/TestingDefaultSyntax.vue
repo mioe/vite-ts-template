@@ -2,7 +2,7 @@
   <div>
     <h2>TestingDefaultSyntax [logPrefix: default-syntax]</h2>
     <button
-      class="bg-gray-200 px-2 py-1 rounded"
+      class="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded"
       @click="toggleBtn"
     >
       toggleBtn()
