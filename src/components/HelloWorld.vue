@@ -9,7 +9,9 @@
       <a
         href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"
         target="_blank"
-      >Vetur</a>
+      >
+        Vetur
+      </a>
       or
       <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
       (if using
@@ -23,7 +25,9 @@
       <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
     </p>
 
-    <button class="bg-gray-200 px-2 py-1 rounded" @click="count++">count is: {{ count }}</button>
+    <button class="bg-gray-200 px-2 py-1 rounded" @click="count++">
+      count is: {{ count }}
+    </button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test hot module replacement.

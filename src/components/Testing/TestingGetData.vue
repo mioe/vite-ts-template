@@ -7,7 +7,9 @@
     >
       getData()
     </button>
-    <p v-if="isLoading">Loading...</p>
+    <p v-if="isLoading">
+      Loading...
+    </p>
     <ul v-else class="relative w-full h-24 overflow-y-auto border border-gray-200 rounded">
       <li
         v-for="(post, idx) in posts"

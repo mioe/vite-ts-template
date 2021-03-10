@@ -4,7 +4,7 @@
     "node": true
   },
   "extends": [
-    "plugin:vue/vue3-essential",
+    "plugin:vue/vue3-recommended",
     "eslint:recommended",
     "@vue/typescript/recommended"
   ],
@@ -15,6 +15,7 @@
     "space-before-function-paren": ["error", "never"],
     "comma-dangle": ["error", "always-multiline"],
     "semi": ["error", "never"],
+    "quotes": ["error", "single"],
     "vue/max-attributes-per-line": ["error", {
       "singleline": 4,
       "multiline": { "max": 1, "allowFirstLine": false }

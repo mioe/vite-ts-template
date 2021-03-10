@@ -8,7 +8,7 @@ if (import.meta.env.NODE_ENV === 'development') {
 
 
 export const fakeApi = axios.create({
-  baseURL: import.meta.env.VITE_APP_FAKE_API_URL,
+  baseURL: `${import.meta.env.VITE_APP_FAKE_API_URL}`,
   headers: {
     Accept: 'application/json',
   },
