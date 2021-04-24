@@ -2,6 +2,60 @@
 
 This template should help get you started developing with Vue 3 and Typescript in Vite.
 
+## init vite-ssg
+Install package:
+```bash
+yarn add vite-ssg --dev
+```
+
+Change `src/main.ts`:
+```ts
+import { ViteSSG } from 'vite-ssg'
+import App from './App.vue'
+import routes from './router/routes' // via vite-ssg
+
+/**
+ * Styles
+ */
+import 'windi.css' // tailwindcss demon
+import '@/assets/sass/main.sass'
+
+/**
+ * via vite-ssg: https://github.com/antfu/vite-ssg
+ */
+// `export const createApp` is required
+export const createApp = ViteSSG(
+  // the root component
+  App,
+  // vue-router options
+  { routes },
+  // function to have custom setups
+  ({ app, router, isClient }) => {
+    // install plugins etc.
+  }
+)
+```
+
+Add `vite.config.ts`:
+```ts
+...
+export default defineConfig({
+  resolve: {
+    alias: {
+      '@/': `${path.resolve(__dirname, 'src')}/`,
+    },
+  },
+  plugins: [
+    ...
+  ],
+  // https://github.com/antfu/vite-ssg
+  ssgOptions: {
+    script: 'async',
+    formatting: 'minify',
+  },
+})
+```
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!

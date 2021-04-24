@@ -1,51 +1,36 @@
 <template>
-  <div class="container mx-auto py-2 flex justify-between text-gray-700 dark:text-gray-200">
-    <nav class="space-x-4">
-      <router-link
-        :to="({name: 'Home'})"
-        :class="{'font-bold': $route.name === 'Home'}"
-      >
-        Home
-      </router-link>
-      <router-link
-        :to="({name: 'About'})"
-        :class="{'font-bold': $route.name === 'About'}"
-      >
-        About
-      </router-link>
-      <router-link
-        :to="({name: 'Testing'})"
-        :class="{'font-bold': $route.name === 'Testing'}"
-      >
-        Testing
-      </router-link>
-    </nav>
+  <AppHeader />
 
-    <div>
-      <button class="icon-btn mx-2 cursor-pointer" @click="toggleDark">
-        <carbon-moon v-if="isDark" />
-        <carbon-sun v-else />
-      </button>
-    </div>
-  </div>
-
-  <main class="container mx-auto mb-4 text-gray-700 dark:text-gray-200">
+  <main class="container mx-auto px-4">
     <router-view />
   </main>
+
+  <AppFooter />
 </template>
 
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { isDark, toggleDark } from '@/plugins/dark-mode'
+import { defineComponent, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useHead } from '@vueuse/head'
 
 export default defineComponent({
   name: 'App',
   setup() {
-    return {
-      isDark,
-      toggleDark,
-    }
+    const { t } = useI18n()
+
+    useHead({
+      // Can be static or computed
+      title: computed(() => t('hello')),
+      meta: [
+        {
+          name: 'description',
+          content: computed(() => t('hello')),
+        },
+      ],
+    })
+
+    return {}
   },
 })
 </script>
