@@ -5,7 +5,7 @@ This template should help get you started developing with Vue 3 and Typescript i
 ## init vite-ssg
 Install package:
 ```bash
-yarn add vite-ssg --dev
+yarn add @vue/server-renderer vite-ssg --dev
 ```
 
 Change `src/main.ts`:
