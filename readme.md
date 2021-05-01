@@ -53,6 +53,7 @@ export default defineConfig({
     formatting: 'minify',
   },
 })
+```
 
 Change `package.json`:
 ```diff
