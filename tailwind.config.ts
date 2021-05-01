@@ -5,8 +5,10 @@ export default defineConfig({
   darkMode: 'class', // or 'media' or 'class'
   plugins: [],
   theme: {
-    colors: {
-      gray: colors.trueGray,
+    extend: {
+      colors: {
+        gray: colors.trueGray,
+      },
     },
   },
 })

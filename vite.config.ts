@@ -17,9 +17,7 @@ export default defineConfig({
     vue(),
 
     // https://github.com/antfu/vite-plugin-windicss
-    WindiCSS({
-      safelist: 'prose prose-sm m-auto text-left',
-    }),
+    WindiCSS(),
 
     // https://github.com/intlify/vite-plugin-vue-i18n
     VueI18n({
@@ -32,7 +30,7 @@ export default defineConfig({
       customComponentResolvers: [
         // https://github.com/antfu/vite-plugin-icons
         ViteIconsResolver({
-          componentPrefix: '',
+          componentPrefix: 'icon',
         }),
       ],
     }),

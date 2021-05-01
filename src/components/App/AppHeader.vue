@@ -34,8 +34,8 @@
         class="px-3 py-1 grid place-items-center mx-2 cursor-pointer border rounded-full focus:outline-none"
         @click="toggleDark"
       >
-        <carbon-moon v-if="isDark" />
-        <carbon-sun v-else />
+        <icon-carbon-moon v-if="isDark" />
+        <icon-carbon-sun v-else />
       </button>
     </div>
     <!-- /toggle-settings -->

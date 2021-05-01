@@ -11,7 +11,7 @@ import head from '@/plugins/vueuse-head'
 /**
  * Styles
  */
-import 'windi.css' // tailwindcss demon
+import 'virtual:windi.css' // tailwindcss demon
 import '@/assets/sass/main.sass'
 
 /**
