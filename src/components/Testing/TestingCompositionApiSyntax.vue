@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { defineComponent, onActivated, onBeforeMount, onBeforeUnmount, onBeforeUpdate,
-  onDeactivated, onErrorCaptured, onMounted, onUnmounted, onUpdated, onRenderTracked, onRenderTriggered, ref, computed, watch } from 'vue'
+  onDeactivated, onErrorCaptured, onMounted, onUnmounted, onUpdated, onRenderTracked, onRenderTriggered, ref, computed, watch, Ref } from 'vue'
 
 export default defineComponent({
   name: 'TestingCompositionApiSyntax', // если не указан ставит name как название файла
@@ -60,11 +60,11 @@ export default defineComponent({
     }
 
     // data
-    const testData = ref('vue-default-syntax')
-    const num = ref(1)
-    const bool = ref(false)
-    const arr = ref(['a', 'b', 'c'])
-    const arrDeep = ref([1, 2, 3])
+    const testData: Ref<string> = ref('vue-default-syntax')
+    const num: Ref<number> = ref(1)
+    const bool: Ref<boolean> = ref(false)
+    const arr: Ref<Array<string>> = ref(['a', 'b', 'c'])
+    const arrDeep: Ref<Array<number>> = ref([1, 2, 3])
 
     // computed
     const testComputed = computed(() => num.value + 5 )
