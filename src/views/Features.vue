@@ -35,7 +35,7 @@
             BaseComponents
           </h2>
           <div class="space-y-2">
-            <div class="flex items-center space-x-2">
+            <div class="flex flex-wrap items-center space-x-2">
               <p>DefaultButton:</p>
               <DefaultButton>
                 Good
@@ -59,7 +59,7 @@
                 </span>
               </DefaultButton>
             </div>
-            <div class="flex items-center space-x-2">
+            <div class="flex flex-wrap items-center space-x-2">
               <p>PrimaryButton:</p>
               <PrimaryButton>
                 Good
@@ -83,10 +83,51 @@
                 </span>
               </PrimaryButton>
             </div>
-            <div class="flex items-center space-x-2">
+            <div class="flex flex-wrap items-center space-x-2">
               <p>DarkModeButton:</p>
               <DarkModeButton />
               <DarkModeButton with-label />
+            </div>
+            <div class="flex flex-wrap items-center space-x-2">
+              <p>CircleButton:</p>
+              <CircleButton>
+                Good
+              </CircleButton>
+              <CircleButton
+                variant="primary"
+              >
+                Good
+              </CircleButton>
+              <CircleButton>
+                <icon-vscode-icons:file-type-go-gopher />
+                <span>
+                  Go
+                </span>
+              </CircleButton>
+              <CircleButton
+                variant="primary"
+              >
+                <icon-vscode-icons:file-type-go-gopher />
+                <span>
+                  Go
+                </span>
+              </CircleButton>
+              <CircleButton>
+                <icon-vscode-icons:file-type-go-gopher />
+              </CircleButton>
+              <CircleButton
+                variant="primary"
+              >
+                <icon-vscode-icons:file-type-go-gopher />
+              </CircleButton>
+              <CircleButton>
+                <icon-eva:plus-fill />
+              </CircleButton>
+              <CircleButton
+                variant="primary"
+              >
+                <icon-eva:plus-fill />
+              </CircleButton>
             </div>
           </div>
         </DefaultCard>
