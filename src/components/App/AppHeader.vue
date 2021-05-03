@@ -30,13 +30,7 @@
           </button>
         </div>
       </div>
-      <button
-        class="px-3 py-1 grid place-items-center mx-2 cursor-pointer border rounded-full focus:outline-none"
-        @click="toggleDark"
-      >
-        <icon-carbon-moon v-if="isDark" />
-        <icon-carbon-sun v-else />
-      </button>
+      <DarkModeButton />
     </div>
     <!-- /toggle-settings -->
   </header>
@@ -46,7 +40,6 @@
 <script lang="ts">
 import { defineComponent, reactive } from 'vue'
 import routes from '@/router/routes'
-import { isDark, toggleDark } from '@/plugins/dark-mode'
 import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
@@ -60,8 +53,6 @@ export default defineComponent({
     const routesList = reactive(routes)
 
     return {
-      isDark,
-      toggleDark,
       t,
       availableLocales,
       locale,
