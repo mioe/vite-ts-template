@@ -8,14 +8,23 @@ const routes = [
     component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('@/views/About.vue'),
+    path: '/features',
+    name: 'Features',
+    component: () => import('@/views/Features.vue'),
   },
   {
     path: '/testing',
     name: 'Testing',
     component: () => import('@/views/Testing.vue'),
+  },
+  {
+    path: '/error-404',
+    name: 'Error404',
+    component: () => import('@/views/Error404.vue'),
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: { name: 'Error404' }
   },
 ]
 

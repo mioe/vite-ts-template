@@ -1,6 +1,10 @@
 <template>
-  <img class="block mx-auto" alt="Vue logo" src="@/assets/logo.png">
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <main class="relative">
+    <div class="container mx-auto px-4">
+      <img class="block mx-auto" alt="Vue logo" src="@/assets/logo.png">
+      <HelloWorld msg="Hello Vue 3 + Vite" />
+    </div>
+  </main>
 </template>
 
 

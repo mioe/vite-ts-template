@@ -1,11 +1,9 @@
 <template>
-  <AppHeader />
-
-  <main class="container mx-auto px-4">
+  <div class="relative min-h-screen flex flex-col text-default dark:text-dark-default">
+    <AppHeader />
     <router-view />
-  </main>
-
-  <AppFooter />
+    <AppFooter />
+  </div>
 </template>
 
 
