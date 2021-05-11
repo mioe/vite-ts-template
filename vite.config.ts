@@ -7,35 +7,39 @@ import ViteComponents from 'vite-plugin-components'
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  resolve: {
-    alias: {
-      '@/': `${path.resolve(__dirname, 'src')}/`,
+export default defineConfig(({ command, mode }) => {
+  console.log('🦕 vite.config.ts/defineConfig', command, mode)
+
+  return {
+    resolve: {
+      alias: {
+        '@/': `${path.resolve(__dirname, 'src')}/`,
+      },
     },
-  },
-  plugins: [
-    vue(),
+    plugins: [
+      vue(),
 
-    // https://github.com/antfu/vite-plugin-windicss
-    WindiCSS(),
+      // https://github.com/antfu/vite-plugin-windicss
+      WindiCSS(),
 
-    // https://github.com/intlify/vite-plugin-vue-i18n
-    VueI18n({
-      include: [path.resolve(__dirname, 'locales/**')],
-    }),
+      // https://github.com/intlify/vite-plugin-vue-i18n
+      VueI18n({
+        include: [path.resolve(__dirname, 'locales/**')],
+      }),
 
-    // https://github.com/antfu/vite-plugin-components
-    ViteComponents({
-      // auto import icons
-      customComponentResolvers: [
-        // https://github.com/antfu/vite-plugin-icons
-        ViteIconsResolver({
-          componentPrefix: 'icon',
-        }),
-      ],
-    }),
+      // https://github.com/antfu/vite-plugin-components
+      ViteComponents({
+        // auto import icons
+        customComponentResolvers: [
+          // https://github.com/antfu/vite-plugin-icons
+          ViteIconsResolver({
+            componentPrefix: 'icon',
+          }),
+        ],
+      }),
 
-    // https://github.com/antfu/vite-plugin-icons
-    ViteIcons(),
-  ],
+      // https://github.com/antfu/vite-plugin-icons
+      ViteIcons(),
+    ],
+  }
 })

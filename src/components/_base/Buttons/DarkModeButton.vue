@@ -3,7 +3,7 @@
     <icon-carbon-moon v-if="isDark" />
     <icon-carbon-sun v-else />
     <span v-if="withLabel" class="capitalize">
-      {{ isDark ? t('themeDark') : t('themeLight') }}
+      {{ isDark ? labelDark : labelLight }}
     </span>
   </button>
 </template>
@@ -12,7 +12,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { isDark, toggleDark } from '@/plugins/dark-mode'
-import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   props: {
@@ -20,14 +19,19 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    labelDark: {
+      type: String,
+      default: 'Dark',
+    },
+    labelLight: {
+      type: String,
+      default: 'Light',
+    },
   },
   setup() {
-    const { t } = useI18n()
-
     return {
       isDark,
       toggleDark,
-      t,
     }
   },
 })
