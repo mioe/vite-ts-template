@@ -24,3 +24,6 @@ indent_size = 2
 # others
 [*.{yml,yaml}]
 indent_size = 2
+
+[*.go]
+indent_style = tab
