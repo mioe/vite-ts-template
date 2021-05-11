@@ -75,6 +75,11 @@ Remove packages:
 yarn remove vue-i18n @intlify/vite-plugin-vue-i18n
 ```
 
+Remove locales folder:
+```bash
+rm -rf ./locales
+```
+
 Remove file `src/plugin/vuei-18n.ts`:
 ```bash
 rm ./src/plugin/vuei-18n.ts
