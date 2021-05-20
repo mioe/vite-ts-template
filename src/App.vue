@@ -1,5 +1,7 @@
 <template>
-  <div class="relative min-h-screen flex flex-col text-default dark:text-dark-default">
+  <div
+    class="relative min-h-screen flex flex-col text-hex-24292e dark:text-hex-adbac7"
+  >
     <AppHeader />
     <router-view />
     <AppFooter />

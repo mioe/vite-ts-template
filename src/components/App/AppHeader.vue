@@ -30,7 +30,9 @@
           </button>
         </div>
       </div>
-      <DarkModeButton />
+      <DarkModeButton
+        with-labels
+      />
     </div>
     <!-- /toggle-settings -->
   </header>

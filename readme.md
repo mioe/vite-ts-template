@@ -224,3 +224,29 @@ export default defineConfig(({ command, mode }) => {
   }
 })
 ```
+
+Change `tsconfig.json`:
+```diff
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "types": [
+-     "vite/client",
+-     "@intlify/vite-plugin-vue-i18n/client"
++     "vite/client"
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.d.ts", "./src/**/*.tsx", "./src/**/*.vue"]
+}
+```

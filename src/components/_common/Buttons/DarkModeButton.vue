@@ -1,8 +1,11 @@
 <template>
-  <button class="min-h-7.5 inline-flex items-center space-x-1 px-3 py-1 bg-btn-default dark:bg-dark-btn-default border rounded-md border-btn-default dark:border-dark-btn-default focus:outline-none" style="line-height: 1;" @click="toggleDark">
+  <button
+    class="min-h-7.5 inline-flex items-center space-x-1 px-3 py-1 bg-hex-fafbfc dark:bg-hex-373e47 border rounded-md border-hex-e1e4e8 dark:border-hex-444c56 focus:outline-none"
+    @click="toggleDark"
+  >
     <icon-carbon-moon v-if="isDark" />
     <icon-carbon-sun v-else />
-    <span v-if="withLabel" class="capitalize">
+    <span v-if="withLabels" class="capitalize">
       {{ isDark ? labelDark : labelLight }}
     </span>
   </button>
@@ -15,7 +18,7 @@ import { isDark, toggleDark } from '@/plugins/dark-mode'
 
 export default defineComponent({
   props: {
-    withLabel: {
+    withLabels: {
       type: Boolean,
       default: false,
     },
