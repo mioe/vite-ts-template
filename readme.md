@@ -1,6 +1,20 @@
 # Vue 3 + Typescript + Vite
 > This template should help get you started developing with Vue 3 and Typescript in Vite.
 
+## requires:
+- nodejs >= 14
+
+## recomentded ide:
+- vscode
+
+## install project:
+```bash
+yarn
+yarn dev # dev-serve
+yarn build # generate SPA
+yarn serve # show SPA
+```
+
 ## init vite-ssg
 Install package:
 ```bash
@@ -80,7 +94,7 @@ Remove locales folder:
 rm -rf ./locales
 ```
 
-Remove file `src/plugin/vuei-18n.ts`:
+Remove file `src/plugins/vue-i18n.ts`:
 ```bash
 rm ./src/plugins/vue-i18n.ts
 ```
