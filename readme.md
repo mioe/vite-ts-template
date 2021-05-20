@@ -82,7 +82,7 @@ rm -rf ./locales
 
 Remove file `src/plugin/vuei-18n.ts`:
 ```bash
-rm ./src/plugin/vuei-18n.ts
+rm ./src/plugins/vue-i18n.ts
 ```
 
 Change `src/App.vue`:
