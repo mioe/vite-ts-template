@@ -1,6 +1,6 @@
 <template>
   <main class="relative">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto pt-[10px] px-[16px]">
       <img class="block mx-auto" alt="Vue logo" src="@/assets/logo.png">
       <HelloWorld msg="Hello Vue 3 + Vite" />
     </div>

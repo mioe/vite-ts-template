@@ -1,36 +1,16 @@
 <template>
-  <div
-    class="relative min-h-screen flex flex-col text-hex-24292e dark:text-hex-adbac7"
-  >
+  <div class="relative min-h-screen flex flex-col">
     <AppHeader />
     <router-view />
-    <AppFooter />
+    <AppFooter class="mt-auto" />
   </div>
 </template>
 
 
 <script lang="ts">
-import { defineComponent, computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { useHead } from '@vueuse/head'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'App',
-  setup() {
-    const { t } = useI18n()
-
-    useHead({
-      // Can be static or computed
-      title: computed(() => t('hello')),
-      meta: [
-        {
-          name: 'description',
-          content: computed(() => t('hello')),
-        },
-      ],
-    })
-
-    return {}
-  },
 })
 </script>

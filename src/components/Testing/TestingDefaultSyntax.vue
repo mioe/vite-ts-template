@@ -1,10 +1,7 @@
 <template>
   <div>
-    <h2>TestingDefaultSyntax [logPrefix: default-syntax]</h2>
-    <button
-      class="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded"
-      @click="toggleBtn"
-    >
+    <h2>TestingDefaultSyntax<br> [logPrefix: default-syntax]</h2>
+    <button @click="toggleBtn">
       toggleBtn()
     </button>
   </div>

@@ -1,9 +1,16 @@
 @import '_root'
 
+*,
+::before,
+::after
+  border-color: var(--border-default)
+
 html
-  background: #f6f8fa
-  &.dark
-    background: #1e2228
+  background: var(--background-default)
 
 body
-  font-family: 'Nunito', sans-serif
+  font-family: 'Ubuntu', sans-serif
+  color: var(--color-default)
+
+button
+  @apply px-[10px] py-[2px] border rounded bg-$background-primary focus:outline-none

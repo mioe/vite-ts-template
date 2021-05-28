@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <h2>TestingGetData</h2>
-    <button
-      class="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded"
-      @click="getData"
-    >
-      getData()
-    </button>
+  <section>
+    <div>
+      <h2>TestingGetData</h2>
+      <button @click="getData">
+        getData()
+      </button>
+    </div>
+
     <p v-if="isLoading">
       Loading...
     </p>
@@ -18,7 +18,7 @@
         {{ post }}
       </li>
     </ul>
-  </div>
+  </section>
 </template>
 
 

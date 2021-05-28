@@ -13,13 +13,8 @@ const routes = [
     component: () => import('@/views/Testing.vue'),
   },
   {
-    path: '/error-404',
-    name: 'Error404',
-    component: () => import('@/views/Error404.vue'),
-  },
-  {
     path: '/:pathMatch(.*)*',
-    redirect: { name: 'Error404' }
+    component: () => import('@/views/Error404.vue'),
   },
 ]
 
