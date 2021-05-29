@@ -11,6 +11,20 @@
         {{ color }}
       </div>
     </div>
+    <h2>TestingColors - Buttons Classes</h2>
+    <div>
+      <button class="mr-[16px] mb-[8px]">
+        Testing button-default
+      </button>
+    </div>
+    <h2>TestingColors - Text Classes</h2>
+    <p
+      v-for="color in colors2"
+      :key="color"
+      :style="`color: var(${color});`"
+    >
+      [{{ color }}] - Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eius, rerum repellat quam tenetur earum repudiandae iusto enim temporibus libero aliquam adipisci quod. Dolores velit nam itaque ea ullam sed.
+    </p>
   </div>
 </template>
 
@@ -24,12 +38,24 @@ export default defineComponent({
       '--background-default',
       '--background-primary',
       '--background-secondary',
-      '--color-default',
       '--border-default',
+    ])
+
+    const colors2 = ref([
+      '--danger',
+      '--poor',
+      '--common',
+      '--uncommon',
+      '--rare',
+      '--epic',
+      '--legendary',
+      '--artifact',
+      '--heirloom',
     ])
 
     return {
       colors,
+      colors2,
     }
   },
 })

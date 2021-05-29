@@ -97,86 +97,42 @@ rm -rf ./locales
 Remove file `src/plugins/vue-i18n.ts`:
 ```bash
 rm ./src/plugins/vue-i18n.ts
+rm ./src/components/Testing/TestingI18n.vue
 ```
 
-Change `src/App.vue`:
+Change `./src/views/Testing.vue`:
 ```diff
-<script lang="ts">
-- import { defineComponent, computed } from 'vue'
-- import { useI18n } from 'vue-i18n'
-- import { useHead } from '@vueuse/head'
-+ import { defineComponent } from 'vue'
+<template>
+  <main class="relative">
+    <div class="container mx-auto pt-[10px] px-[16px]">
+      <h1 class="text-xl mb-[20px]">
+        Testing
+      </h1>
 
-export default defineComponent({
-  name: 'App',
-- setup() {
--   const { t } = useI18n()
--
--   useHead({
--     // Can be static or computed
--     title: computed(() => t('hello')),
--     meta: [
--       {
--         name: 'description',
--         content: computed(() => t('hello')),
--       },
--     ],
--   })
--
--   return {}
-- },
-})
-</script>
-```
+      <div class="space-y-[20px]">
+-       <TestingI18n />
 
-Change `src/components/App/AppHeader.vue`:
-```diff
-...
-<!-- toggle-settings -->
-<div class="flex space-x-4">
-- <div class="flex items-center">
--   <span>t('hello'): </span>
--   <span>{{ t('hello') }}</span>
--   <div class="ml-4 flex space-x-4">
--     <button
--       v-for="(lng, idx) in availableLocales"
--       :key="idx"
--       class="cursor-pointer"
--       :class="{'font-bold': locale === lng}"
--       @click="toggleLocales(lng)"
--     >
--       {{ lng }}
--     </button>
--   </div>
-- </div>
-  <DarkModeButton />
-</div>
-<!-- /toggle-settings -->
-...
-<script lang="ts">
-import { defineComponent, reactive } from 'vue'
-import routes from '@/router/routes'
-- import { useI18n } from 'vue-i18n'
+        <TestingColors />
 
-export default defineComponent({
-  setup() {
--   const { t, availableLocales, locale } = useI18n()
+        <TestingDefaultSyntax
+          test-required-prop="success"
+          test-bool-prop
+          :test-num-prop="20"
+        />
 
--   const toggleLocales = (langCode: string) => {
--     locale.value = langCode
--   }
--
-    const routesList = reactive(routes)
+        <TestingGetData />
 
-    return {
--     t,
--     availableLocales,
--     locale,
--     toggleLocales,
-      routesList,
-    }
-  },
-...
+        <TestingCompositionApiSyntax
+          test-required-prop="success"
+          test-bool-prop
+          :test-num-prop="20"
+        />
+
+        <TestingVitePluginIcons />
+      </div>
+    </div>
+  </main>
+</template>
 ```
 
 Change `main.js`:

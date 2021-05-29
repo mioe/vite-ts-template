@@ -6,6 +6,8 @@
       </h1>
 
       <div class="space-y-[20px]">
+        <TestingI18n />
+
         <TestingColors />
 
         <TestingDefaultSyntax
