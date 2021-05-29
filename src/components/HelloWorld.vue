@@ -56,7 +56,7 @@ export default defineComponent({
 
 <style scoped>
 a {
-  color: #42b983;
+  color: var(--vue);
 }
 
 label {

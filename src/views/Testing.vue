@@ -8,6 +8,8 @@
       <div class="space-y-[20px]">
         <TestingI18n />
 
+        <TestingCodeBlock />
+
         <TestingColors />
 
         <TestingDefaultSyntax

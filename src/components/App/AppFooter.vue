@@ -12,5 +12,5 @@
 
 <style lang="sass" scoped>
 a
-  color: #42b983
+  color: var(--vue)
 </style>
