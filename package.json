@@ -8,7 +8,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@vueuse/core": "^4.11.1",
+    "@vueuse/core": "^5.0.2",
     "@vueuse/head": "^0.5.1",
     "axios": "^0.21.1",
     "highlight.js": "^10.7.2",

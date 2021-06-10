@@ -10,6 +10,8 @@
 
         <TestingCodeBlock />
 
+        <TestingForm />
+
         <TestingColors />
 
         <TestingDefaultSyntax
