@@ -16,11 +16,12 @@
     >
     <label
       :for="id"
-      class="absolute inline-block top-0 left-[10px] transition-all transform"
+      class="absolute inline-block top-0 left-0 text-[16px] transform "
       :class="isFocus || valueIsNotEmpty
-        ? 'translate-y-[2px] text-[12px]'
-        : 'translate-y-[10px] text-[16px]'
+        ? 'scale-70 -translate-x-[4px] translate-y-[2px] '
+        : 'scale-100 translate-x-[10px] translate-y-[10px] '
       "
+      style="transition: transform var(--transition), font-size var(--transition);"
     >
       {{ placeholder }}
     </label>
@@ -78,7 +79,8 @@ export default defineComponent({
       isFocus.value = false
     }
 
-    const onInput = (ev) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const onInput = (ev: any) => {
       emit('update:modelValue', ev.target.value)
     }
 
