@@ -83,7 +83,7 @@ Change `package.json`:
 }
 ```
 
-# Add vue-i18n
+## Add vue-i18n
 Add packages:
 ```bash
 yarn add vue-i18n @intlify/vite-plugin-vue-i18n
