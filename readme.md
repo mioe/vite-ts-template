@@ -83,56 +83,29 @@ Change `package.json`:
 }
 ```
 
-# remove vue-i18n
-Remove packages:
+# Add vue-i18n
+Add packages:
 ```bash
-yarn remove vue-i18n @intlify/vite-plugin-vue-i18n
+yarn add vue-i18n @intlify/vite-plugin-vue-i18n
 ```
 
-Remove locales folder:
+Add locales folder:
 ```bash
-rm -rf ./locales
+./locales/en.json
+....
 ```
 
-Remove file `src/plugins/vue-i18n.ts`:
-```bash
-rm ./src/plugins/vue-i18n.ts
-rm ./src/components/Testing/TestingI18n.vue
-```
+Add `src/plugins/vue-i18n.ts`:
+```ts
+import { createI18n } from 'vue-i18n'
+import messages from '@intlify/vite-plugin-vue-i18n/messages'
 
-Change `./src/views/Testing.vue`:
-```diff
-<template>
-  <main class="relative">
-    <div class="container mx-auto pt-[10px] px-[16px]">
-      <h1 class="text-xl mb-[20px]">
-        Testing
-      </h1>
+const i18n = createI18n({
+  locale: 'en', // set locale
+  messages,
+})
 
-      <div class="space-y-[20px]">
--       <TestingI18n />
-
-        <TestingColors />
-
-        <TestingDefaultSyntax
-          test-required-prop="success"
-          test-bool-prop
-          :test-num-prop="20"
-        />
-
-        <TestingGetData />
-
-        <TestingCompositionApiSyntax
-          test-required-prop="success"
-          test-bool-prop
-          :test-num-prop="20"
-        />
-
-        <TestingVitePluginIcons />
-      </div>
-    </div>
-  </main>
-</template>
+export default i18n
 ```
 
 Change `main.js`:
@@ -144,7 +117,7 @@ import router from './router'
 /**
  * Plugins
  */
-- import i18n from '@/plugins/vue-i18n'
++ import i18n from '@/plugins/vue-i18n'
 import head from '@/plugins/vueuse-head'
 
 /**
@@ -158,7 +131,7 @@ import '@/assets/sass/main.sass'
  */
 createApp(App)
   .use(router)
-- .use(i18n)
++ .use(i18n)
   .use(head)
   .mount('#app')
 ```
@@ -169,7 +142,7 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
-- import VueI18n from '@intlify/vite-plugin-vue-i18n'
++ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import ViteComponents from 'vite-plugin-components'
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
 
@@ -185,10 +158,10 @@ export default defineConfig(({ command, mode }) => {
     },
     plugins: [
       ...
--     // https://github.com/intlify/vite-plugin-vue-i18n
--     VueI18n({
--       include: [path.resolve(__dirname, 'locales/**')],
--     }),
++     // https://github.com/intlify/vite-plugin-vue-i18n
++     VueI18n({
++       include: [path.resolve(__dirname, 'locales/**')],
++     }),
       ...
     ],
   }
@@ -209,9 +182,8 @@ Change `tsconfig.json`:
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "types": [
--     "vite/client",
--     "@intlify/vite-plugin-vue-i18n/client"
-+     "vite/client"
++     "vite/client",
++     "@intlify/vite-plugin-vue-i18n/client"
     ],
     "paths": {
       "@/*": ["./src/*"]

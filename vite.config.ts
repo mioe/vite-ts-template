@@ -2,7 +2,6 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
-import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import ViteComponents from 'vite-plugin-components'
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
 
@@ -22,11 +21,6 @@ export default defineConfig(({ command, mode }) => {
 
       // https://github.com/antfu/vite-plugin-windicss
       WindiCSS(),
-
-      // https://github.com/intlify/vite-plugin-vue-i18n
-      VueI18n({
-        include: [path.resolve(__dirname, 'locales/**')],
-      }),
 
       // https://github.com/antfu/vite-plugin-components
       ViteComponents({
