@@ -1,10 +1,14 @@
 <template>
   <div>
     <h2>TestingForm</h2>
-    <div>
+    <div class="space-y-[5px]">
       <FormInput
         v-model="text"
-        placeholder="TestingInput"
+        placeholder="FormInput"
+      />
+      <FormTextarea
+        v-model="text"
+        placeholder="FormTextarea"
       />
     </div>
   </div>

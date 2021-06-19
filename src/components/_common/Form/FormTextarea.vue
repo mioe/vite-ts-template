@@ -3,9 +3,8 @@
     class="relative border rounded bg-$background-primary"
     :class="{'border-$rare': isFocus && !disabled}"
   >
-    <input
+    <textarea
       :id="id"
-      :type="type"
       :value="modelValue"
       :disabled="disabled"
       placeholder=""
@@ -13,7 +12,7 @@
       @focus="onFocus"
       @blur="onBlur"
       @input="onInput"
-    >
+    />
     <label
       :for="id"
       class="absolute inline-block top-0 left-[10px] text-[16px] transform"
@@ -45,10 +44,6 @@ export default defineComponent({
     id: {
       type: String,
       default: generateId(),
-    },
-    type: {
-      type: String,
-      default: 'text',
     },
     placeholder: {
       type: String,
