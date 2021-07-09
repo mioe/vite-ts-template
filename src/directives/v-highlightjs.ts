@@ -1,6 +1,7 @@
 import hljs from 'highlight.js'
 import type { DirectiveBinding } from 'vue'
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const directive = (el: HTMLElement, binding: DirectiveBinding) => {
   const codeNodes = el.querySelectorAll('code')
 

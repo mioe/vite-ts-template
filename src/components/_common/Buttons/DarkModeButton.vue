@@ -1,7 +1,7 @@
 <template>
   <button
     class="inline-flex items-center space-x-[4px]"
-    @click="toggleDark"
+    @click="toggleDark()"
   >
     <icon-carbon-moon v-if="isDark" />
     <icon-carbon-sun v-else />

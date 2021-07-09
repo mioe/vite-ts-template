@@ -74,7 +74,6 @@ export default defineComponent({
       isFocus.value = false
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const onInput = (ev: any) => {
       emit('update:modelValue', ev.target.value)
     }
