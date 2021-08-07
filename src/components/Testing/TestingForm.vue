@@ -29,7 +29,7 @@ import FormCheckbox from '../_common/Form/FormCheckbox.vue'
 export default defineComponent({
   setup() {
     const text: Ref<string> = ref('')
-    const fields: Ref<Array<string>> = ['Vue', 'Vue3', 'Windicss']
+    const fields: Ref<Array<string>> = ref(['Vue', 'Vue3', 'Windicss'])
     const testArray: Ref<Array<string>> = ref([])
 
     return {

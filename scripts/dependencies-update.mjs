@@ -1,6 +1,6 @@
 #!/usr/bin/env zx
 
-const { dependencies, devDependencies } = require('./package.json')
+const { dependencies, devDependencies } = require('../package.json')
 
 const nextPackage = (packageName) => {
   const next = {
@@ -18,7 +18,7 @@ const packages = Object.keys(dependencies).map(e => nextPackage(e))
 const devPackages = Object.keys(devDependencies)
 
 // @ts-ignore
-await $`yarn add ${packages}`
+await $`cd .. && yarn add ${packages}`
 // @ts-ignore
-await $`yarn add --dev ${devPackages}`
+await $`cd .. && yarn add --dev ${devPackages}`
 
