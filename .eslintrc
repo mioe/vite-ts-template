@@ -2,6 +2,7 @@
   "root": true,
   "env": {
     "browser": true,
+    "es6": true,
     "node": true
   },
   "extends": [
@@ -10,6 +11,12 @@
     "@vue/typescript/recommended",
     "plugin:vuejs-accessibility/recommended"
   ],
+  "globals": {
+    "defineProps": "readonly",
+    "defineEmits": "readonly",
+    "defineExpose": "readonly",
+    "withDefaults": "readonly"
+  },
   "parserOptions": {
     "ecmaVersion": 2020
   },

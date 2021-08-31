@@ -13,7 +13,7 @@
 
 
 <script setup lang="ts">
-import { defineProps, computed, ComputedRef } from 'vue'
+import { computed, ComputedRef } from 'vue'
 import { isDark, toggleDark } from '@/plugins/dark-mode'
 
 const props = defineProps({

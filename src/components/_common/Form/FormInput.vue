@@ -30,7 +30,7 @@
 
 
 <script setup lang="ts" >
-import { ref, Ref, computed, ComputedRef, defineProps, defineEmits } from 'vue'
+import { ref, Ref, computed, ComputedRef } from 'vue'
 
 const props = defineProps({
   modelValue: {
@@ -55,9 +55,9 @@ const props = defineProps({
   },
 })
 
-const emit = defineEmits([
-  'update:modelValue',
-])
+const emit = defineEmits<{
+  (e: 'update:modelValue', value: string): void,
+}>()
 
 const isFocus: Ref<boolean> = ref(false)
 
