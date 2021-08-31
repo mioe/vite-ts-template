@@ -29,7 +29,7 @@ const getData = async() => {
     <p v-if="isLoading">
       Loading...
     </p>
-    <ul v-else class="relative w-full h-24 overflow-y-auto border bg-$background-secondary rounded">
+    <ul v-else class="relative w-full h-24 overflow-y-auto border bg-$secondary">
       <li
         v-for="(post, idx) in posts"
         :key="idx"

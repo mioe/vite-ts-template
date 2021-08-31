@@ -44,7 +44,7 @@ const onInput = (ev: any): void => { emit('update:modelValue', ev.target.value) 
 <template>
   <label
     :for="id"
-    class="relative inline-block w-full border rounded bg-$background-primary"
+    class="relative inline-block w-full border bg-$primary"
     :class="{'border-$rare': isFocus && !disabled}"
   >
     <textarea

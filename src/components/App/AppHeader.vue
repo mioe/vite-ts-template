@@ -8,7 +8,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <header class="sticky top-0 z-90 border-b bg-$background-secondary">
+  <header class="sticky top-0 z-90 border-b bg-$secondary">
     <div class="container mx-auto px-[16px] py-[8px] flex items-center justify-between">
       <nav class="space-x-[16px]">
         <router-link

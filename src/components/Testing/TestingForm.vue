@@ -7,13 +7,13 @@ const text: Ref<string> = ref('')
   <div>
     <h2>TestingForm</h2>
     <div class="space-y-[5px]">
-      <FormInput
+      <FormMaterialInput
         v-model="text"
-        placeholder="FormInput"
+        placeholder="FormMaterialInput"
       />
-      <FormTextarea
+      <FormMaterialTextarea
         v-model="text"
-        placeholder="FormTextarea"
+        placeholder="FormMaterialTextarea"
       />
     </div>
   </div>

@@ -2,10 +2,10 @@
 import { ref, Ref } from 'vue'
 
 const bgColors: Ref<Array<string>> = ref([
-  '--background-default',
-  '--background-primary',
-  '--background-secondary',
-  '--border-default',
+  '--document',
+  '--primary',
+  '--secondary',
+  '--default',
 ])
 
 const TextColors = ref([
@@ -28,7 +28,7 @@ const TextColors = ref([
       <div
         v-for="color in bgColors"
         :key="color"
-        class="border rounded-full p-[4px] mr-[16px] mb-[8px]"
+        class="border p-[4px] mr-[16px] mb-[8px]"
         :style="`background: var(${color});`"
       >
         {{ color }}
