@@ -16,6 +16,10 @@ textarea,
 select
   font-weight: inherit
 
+textarea:not(.clear)
+  @apply py-[2px]
+
+textarea:not(.clear),
 input[type=text]:not(.clear),
 input[type=number]:not(.clear)
   @apply w-full min-h-[31px] px-[6px] bg-$primary border border-$primary font-light focus:outline-none focus:border-$rare

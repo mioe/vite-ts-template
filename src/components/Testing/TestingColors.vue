@@ -6,10 +6,11 @@ const bgColors: Ref<Array<string>> = ref([
   '--primary',
   '--secondary',
   '--default',
+  '--success',
+  '--danger',
 ])
 
 const TextColors = ref([
-  '--danger',
   '--poor',
   '--common',
   '--uncommon',

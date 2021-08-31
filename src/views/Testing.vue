@@ -7,6 +7,7 @@
 
       <div class="space-y-[20px]">
         <TestingColors />
+        <TestingDefaultClasses />
         <TestingForm />
         <TestingGetData />
         <TestingPinia />
