@@ -4,8 +4,9 @@ const { dependencies, devDependencies } = require('../package.json')
 
 const nextPackage = (packageName) => {
   const next = {
-    vue: 'vue@next',
     'vue-router': 'vue-router@next',
+    pinia: 'pinia@next',
+    vue: 'vue@next',
   }
 
   if (Object.keys(next).includes(packageName)) {

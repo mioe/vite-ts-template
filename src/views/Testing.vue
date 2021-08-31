@@ -6,9 +6,10 @@
       </h1>
 
       <div class="space-y-[20px]">
-        <TestingForm />
         <TestingColors />
+        <TestingForm />
         <TestingGetData />
+        <TestingPinia />
         <TestingVitePluginIcons />
       </div>
     </div>

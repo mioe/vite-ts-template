@@ -15,6 +15,7 @@
     "@vueuse/core": "^6.0.0",
     "@vueuse/head": "^0.6.0",
     "axios": "^0.21.1",
+    "pinia": "^2.0.0-rc.6",
     "vue": "^3.2.6",
     "vue-router": "^4.0.11"
   },
