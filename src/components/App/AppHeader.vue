@@ -11,7 +11,7 @@
           {{ r.name }}
         </router-link>
       </nav>
-      <div>
+      <div class="flex items-center">
         <DarkModeButton with-labels />
       </div>
     </div>
@@ -19,20 +19,11 @@
 </template>
 
 
-<script lang="ts">
-import { defineComponent, reactive } from 'vue'
+<script setup lang="ts">
+import { reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import routesConfig from '@/router/routes'
 
-export default defineComponent({
-  setup() {
-    const routes = reactive(routesConfig)
-    const route = useRoute()
-
-    return {
-      routes,
-      route,
-    }
-  },
-})
+const routes = reactive(routesConfig)
+const route = useRoute()
 </script>

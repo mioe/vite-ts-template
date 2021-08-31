@@ -3,7 +3,7 @@
     <h2>TestingColors</h2>
     <div class="flex flex-wrap">
       <div
-        v-for="color in colors"
+        v-for="color in bgColors"
         :key="color"
         class="border rounded-full p-[4px] mr-[16px] mb-[8px]"
         :style="`background: var(${color});`"
@@ -11,15 +11,9 @@
         {{ color }}
       </div>
     </div>
-    <h2>TestingColors - Buttons Classes</h2>
-    <div>
-      <button class="mr-[16px] mb-[8px]">
-        Testing button-default
-      </button>
-    </div>
     <h2>TestingColors - Text Classes</h2>
     <p
-      v-for="color in colors2"
+      v-for="color in TextColors"
       :key="color"
       :style="`color: var(${color});`"
     >
@@ -29,34 +23,25 @@
 </template>
 
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
+<script setup lang="ts">
+import { ref, Ref } from 'vue'
 
-export default defineComponent({
-  setup() {
-    const colors = ref([
-      '--background-default',
-      '--background-primary',
-      '--background-secondary',
-      '--border-default',
-    ])
+const bgColors: Ref<Array<string>> = ref([
+  '--background-default',
+  '--background-primary',
+  '--background-secondary',
+  '--border-default',
+])
 
-    const colors2 = ref([
-      '--danger',
-      '--poor',
-      '--common',
-      '--uncommon',
-      '--rare',
-      '--epic',
-      '--legendary',
-      '--artifact',
-      '--heirloom',
-    ])
-
-    return {
-      colors,
-      colors2,
-    }
-  },
-})
+const TextColors = ref([
+  '--danger',
+  '--poor',
+  '--common',
+  '--uncommon',
+  '--rare',
+  '--epic',
+  '--legendary',
+  '--artifact',
+  '--heirloom',
+])
 </script>

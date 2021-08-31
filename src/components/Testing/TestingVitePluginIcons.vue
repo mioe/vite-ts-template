@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <h2>TestingVitePluginIcons</h2>
 
     <icon-carbon-campsite />
@@ -8,5 +8,5 @@
     <icon-carbon-language />
     <icon-carbon-dicom-overlay />
     <icon-carbon-logo-github />
-  </div>
+  </section>
 </template>

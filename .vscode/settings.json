@@ -1,5 +1,4 @@
 {
-  "volar.tsPlugin": true,
   "volar.tsPluginStatus": false,
   "typescript.tsdk": "node_modules/typescript/lib"
 }

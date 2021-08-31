@@ -1,6 +1,6 @@
 <template>
   <button
-    class="inline-flex items-center space-x-[4px]"
+    class="inline-flex items-center px-[8px] space-x-[8px]"
     @click="toggleDark()"
   >
     <icon-carbon-moon v-if="isDark" />
@@ -12,30 +12,20 @@
 </template>
 
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import { defineProps, computed, ComputedRef } from 'vue'
 import { isDark, toggleDark } from '@/plugins/dark-mode'
 
-export default defineComponent({
-  props: {
-    withLabels: {
-      type: Boolean,
-      default: false,
-    },
-    labelDark: {
-      type: String,
-      default: 'Dark',
-    },
-    labelLight: {
-      type: String,
-      default: 'Light',
-    },
+const props = defineProps({
+  labelDark: {
+    type: String,
+    default: null,
   },
-  setup() {
-    return {
-      isDark,
-      toggleDark,
-    }
+  labelLight: {
+    type: String,
+    default: null,
   },
 })
+
+const withLabels: ComputedRef<boolean> = computed(() => !!props.labelDark && !!props.labelLight)
 </script>

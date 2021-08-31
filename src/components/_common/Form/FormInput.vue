@@ -29,67 +29,45 @@
 </template>
 
 
-<script lang="ts">
-import { defineComponent, ref, Ref, computed, ComputedRef } from 'vue'
+<script setup lang="ts" >
+import { ref, Ref, computed, ComputedRef, defineProps, defineEmits } from 'vue'
 
-const generateId = () => {
-  return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
-}
-
-export default defineComponent({
-  props: {
-    modelValue: {
-      type: String,
-      default: '',
-    },
-    id: {
-      type: String,
-      default: generateId(),
-    },
-    type: {
-      type: String,
-      default: 'text',
-    },
-    placeholder: {
-      type: String,
-      default: '',
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
+const props = defineProps({
+  modelValue: {
+    type: String,
+    default: '',
   },
-  emits: [
-    'update:modelValue',
-  ],
-  setup(props, { emit }) {
-    const isFocus: Ref<boolean> = ref(false)
-
-    const valueIsNotEmpty: ComputedRef<boolean> = computed(() =>
-      props.modelValue
-        ? props.modelValue.length > 0
-        : false,
-    )
-
-    const onFocus = () => {
-      isFocus.value = true
-    }
-
-    const onBlur = () => {
-      isFocus.value = false
-    }
-
-    const onInput = (ev: any) => {
-      emit('update:modelValue', ev.target.value)
-    }
-
-    return {
-      isFocus,
-      valueIsNotEmpty,
-      onFocus,
-      onBlur,
-      onInput,
-    }
+  id: {
+    type: String,
+    default: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
+  },
+  type: {
+    type: String,
+    default: 'text',
+  },
+  placeholder: {
+    type: String,
+    default: '',
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
   },
 })
+
+const emit = defineEmits([
+  'update:modelValue',
+])
+
+const isFocus: Ref<boolean> = ref(false)
+
+const valueIsNotEmpty: ComputedRef<boolean> = computed(() =>
+  props.modelValue
+    ? props.modelValue.length > 0
+    : false,
+)
+
+const onFocus = (): void => { isFocus.value = true }
+const onBlur = (): void => { isFocus.value = false }
+const onInput = (ev: any): void => { emit('update:modelValue', ev.target.value) }
 </script>

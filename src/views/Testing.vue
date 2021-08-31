@@ -6,25 +6,11 @@
       </h1>
 
       <div class="space-y-[20px]">
-        <TestingCodeBlock />
-
         <TestingForm />
 
         <TestingColors />
 
-        <TestingDefaultSyntax
-          test-required-prop="success"
-          test-bool-prop
-          :test-num-prop="20"
-        />
-
         <TestingGetData />
-
-        <TestingCompositionApiSyntax
-          test-required-prop="success"
-          test-bool-prop
-          :test-num-prop="20"
-        />
 
         <TestingVitePluginIcons />
       </div>

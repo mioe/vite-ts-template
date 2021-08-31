@@ -10,33 +10,13 @@
         v-model="text"
         placeholder="FormTextarea"
       />
-      <template v-for="f in fields" :key="f">
-        <FormCheckbox
-          v-model="testArray"
-          :value="f"
-        />
-      </template>
-      {{ testArray }}
     </div>
   </div>
 </template>
 
 
-<script lang="ts">
-import { defineComponent, ref, Ref } from 'vue'
-import FormCheckbox from '../_common/Form/FormCheckbox.vue'
+<script setup lang="ts">
+import { ref, Ref } from 'vue'
 
-export default defineComponent({
-  setup() {
-    const text: Ref<string> = ref('')
-    const fields: Ref<Array<string>> = ref(['Vue', 'Vue3', 'Windicss'])
-    const testArray: Ref<Array<string>> = ref([])
-
-    return {
-      text,
-      fields,
-      testArray,
-    }
-  },
-})
+const text: Ref<string> = ref('')
 </script>

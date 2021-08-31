@@ -22,32 +22,24 @@
 </template>
 
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import { fakeApi } from '@/plugins/axios'
+<script setup lang="ts">
+import { ref, Ref } from 'vue'
+import axios from '@/plugins/axios'
 
-export default defineComponent({
-  data: () => ({
-    isLoading: false,
-    posts: [],
-  }),
-  async mounted() {
-    await this.getData()
-  },
-  methods: {
-    async getData() {
-      this.isLoading = true
-      try {
-        const response = await fakeApi('/posts')
-        this.posts = response.data
-        this.isLoading = false
-      } catch (err) {
-        this.isLoading = false
-        console.error('🐹 fakeApi', err)
-      }
-    },
-  },
-})
+const isLoading: Ref<boolean> = ref(false)
+const posts: Ref<Array<any>> = ref([])
+
+const getData = async() => {
+  isLoading.value = true
+  try {
+    const response = await axios.get(import.meta.env.VITE_APP_FAKE_DATA + '/posts')
+    posts.value = response.data
+    isLoading .value= false
+  } catch (err) {
+    isLoading.value = false
+    console.error('🐹 fakeApi', err)
+  }
+}
 </script>
 
 
