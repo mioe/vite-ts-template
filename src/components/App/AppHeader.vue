@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { reactive } from 'vue'
+import { useRoute } from 'vue-router'
+import routesConfig from '@/router/routes'
+
+const routes = reactive(routesConfig)
+const route = useRoute()
+</script>
+
 <template>
   <header class="sticky top-0 z-90 border-b bg-$background-secondary">
     <div class="container mx-auto px-[16px] py-[8px] flex items-center justify-between">
@@ -17,13 +26,3 @@
     </div>
   </header>
 </template>
-
-
-<script setup lang="ts">
-import { reactive } from 'vue'
-import { useRoute } from 'vue-router'
-import routesConfig from '@/router/routes'
-
-const routes = reactive(routesConfig)
-const route = useRoute()
-</script>

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import HelloWorld from '@/components/HelloWorld.vue'
+</script>
+
 <template>
   <main class="relative">
     <div class="container mx-auto pt-[10px] px-[16px]">
@@ -6,16 +10,3 @@
     </div>
   </main>
 </template>
-
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default defineComponent({
-  components: {
-    HelloWorld,
-  },
-})
-</script>

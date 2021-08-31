@@ -1,3 +1,26 @@
+<script setup lang="ts">
+import { ref, Ref } from 'vue'
+
+const bgColors: Ref<Array<string>> = ref([
+  '--background-default',
+  '--background-primary',
+  '--background-secondary',
+  '--border-default',
+])
+
+const TextColors = ref([
+  '--danger',
+  '--poor',
+  '--common',
+  '--uncommon',
+  '--rare',
+  '--epic',
+  '--legendary',
+  '--artifact',
+  '--heirloom',
+])
+</script>
+
 <template>
   <div>
     <h2>TestingColors</h2>
@@ -21,27 +44,3 @@
     </p>
   </div>
 </template>
-
-
-<script setup lang="ts">
-import { ref, Ref } from 'vue'
-
-const bgColors: Ref<Array<string>> = ref([
-  '--background-default',
-  '--background-primary',
-  '--background-secondary',
-  '--border-default',
-])
-
-const TextColors = ref([
-  '--danger',
-  '--poor',
-  '--common',
-  '--uncommon',
-  '--rare',
-  '--epic',
-  '--legendary',
-  '--artifact',
-  '--heirloom',
-])
-</script>

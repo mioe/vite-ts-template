@@ -9,8 +9,7 @@
   </footer>
 </template>
 
-
-<style lang="sass" scoped>
+<style scoped lang="sass">
 a
   color: var(--vue)
 </style>

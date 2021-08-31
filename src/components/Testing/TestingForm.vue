@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { ref, Ref } from 'vue'
+
+const text: Ref<string> = ref('')
+</script>
 <template>
   <div>
     <h2>TestingForm</h2>
@@ -13,10 +18,3 @@
     </div>
   </div>
 </template>
-
-
-<script setup lang="ts">
-import { ref, Ref } from 'vue'
-
-const text: Ref<string> = ref('')
-</script>
