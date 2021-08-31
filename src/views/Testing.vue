@@ -7,11 +7,8 @@
 
       <div class="space-y-[20px]">
         <TestingForm />
-
         <TestingColors />
-
         <TestingGetData />
-
         <TestingVitePluginIcons />
       </div>
     </div>

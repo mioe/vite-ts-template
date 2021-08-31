@@ -1,6 +1,7 @@
 <template>
-  <div
-    class="relative border rounded bg-$background-primary"
+  <label
+    :for="id"
+    class="relative inline-block w-full border rounded bg-$background-primary"
     :class="{'border-$rare': isFocus && !disabled}"
   >
     <input
@@ -14,8 +15,7 @@
       @blur="onBlur"
       @input="onInput"
     >
-    <label
-      :for="id"
+    <span
       class="absolute inline-block top-0 left-[10px] text-[16px] transform"
       :class="isFocus || valueIsNotEmpty
         ? 'translate-y-[2px] scale-70'
@@ -24,8 +24,8 @@
       style="transition: transform var(--transition); transform-origin: top left;"
     >
       {{ placeholder }}
-    </label>
-  </div>
+    </span>
+  </label>
 </template>
 
 
