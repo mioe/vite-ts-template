@@ -15,8 +15,8 @@ const handleInput = (ev: any) => changeName(ev.target.value)
   <section>
     <h2>TestingPinia</h2>
     <div class="space-y-[5px]">
-      <label for="hello" class="space-x-[16px]">
-        <span>greetings = <b>{{ greetings }}</b></span>
+      <label for="hello">
+        <p>greetings = <b>{{ greetings }}</b></p>
         <input
           id="hello"
           type="text"

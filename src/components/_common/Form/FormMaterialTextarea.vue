@@ -52,7 +52,7 @@ const onInput = (ev: any): void => { emit('update:modelValue', ev.target.value) 
       :value="modelValue"
       :disabled="disabled"
       placeholder=""
-      class="w-full min-h-[34px] px-[10px] pt-[16px] pb-[2px] text-[16px] focus:outline-none bg-transparent"
+      class="clear w-full min-h-[34px] px-[10px] pt-[16px] pb-[2px] text-[16px] focus:outline-none bg-transparent"
       @focus="onFocus"
       @blur="onBlur"
       @input="onInput"

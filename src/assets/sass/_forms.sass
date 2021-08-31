@@ -10,3 +10,16 @@ input[type=number]
 
 select::-ms-expand
   display: none
+
+input,
+textarea,
+select
+  font-weight: inherit
+
+input[type=text]:not(.clear),
+input[type=number]:not(.clear)
+  @apply w-full min-h-[31px] px-[6px] bg-$primary border border-$primary font-light focus:outline-none focus:border-$rare
+
+select:not(.clear)
+  @apply w-full h-[31px] leading-[28px] pl-[2px] pr-[8px] bg-$primary cursor-pointer border border-$primary font-light focus:outline-none focus:border-$rare
+
