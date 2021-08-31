@@ -2,8 +2,10 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
-import ViteComponents from 'vite-plugin-components'
-import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
+import Components from 'unplugin-vue-components/vite'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 
 // https://vitejs.dev/config/
@@ -22,19 +24,22 @@ export default defineConfig(({ command, mode }) => {
       // https://github.com/antfu/vite-plugin-windicss
       WindiCSS(),
 
-      // https://github.com/antfu/vite-plugin-components
-      ViteComponents({
+      // https://github.com/antfu/unplugin-vue-components
+      Components({
         // auto import icons
-        customComponentResolvers: [
-          // https://github.com/antfu/vite-plugin-icons
-          ViteIconsResolver({
+        resolvers: [
+          // https://github.com/antfu/unplugin-icons
+          IconsResolver({
             componentPrefix: 'icon',
           }),
         ],
       }),
 
-      // https://github.com/antfu/vite-plugin-icons
-      ViteIcons(),
+      // https://github.com/antfu/unplugin-icons
+      Icons(),
+
+      // https://github.com/btd/rollup-plugin-visualizer
+      visualizer(),
     ],
   }
 })

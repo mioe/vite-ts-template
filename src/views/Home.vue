@@ -4,7 +4,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 <template>
   <main class="relative">
-    <div class="container mx-auto pt-[10px] px-[16px]">
+    <div class="container mx-auto pt-[10px] px-[16px] text-center">
       <img class="block mx-auto" alt="Vue logo" src="@/assets/logo.png">
       <HelloWorld msg="Hello Vue 3 + Vite" />
     </div>
