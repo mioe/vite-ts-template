@@ -23,6 +23,7 @@
   "rules": {
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "vuejs-accessibility/label-has-for": "off",
     "comma-dangle": ["error", "always-multiline"],
     "quotes": ["error", "single"],
     "semi": ["error", "never"],

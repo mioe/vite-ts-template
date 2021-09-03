@@ -6,7 +6,7 @@ const setClear: Ref<boolean> = ref(false)
 <template>
   <section>
     <h2>TestingDefaultClasses</h2>
-    <!-- eslint-disable vuejs-accessibility/label-has-for vuejs-accessibility/form-control-has-label -->
+    <!-- eslint-disable vuejs-accessibility/form-control-has-label -->
     <label>
       <input v-model="setClear" type="checkbox">
       <span class="ml-[10px]">set clear class</span>
@@ -19,6 +19,14 @@ const setClear: Ref<boolean> = ref(false)
       <label class="block">
         <p>textarea:</p>
         <textarea :class="{'clear': setClear}" />
+      </label>
+      <label class="block">
+        <p>select:</p>
+        <select :class="{'clear': setClear}">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
       </label>
       <div class="inline-flex flex-wrap">
         <button :class="{'clear': setClear}">
@@ -46,6 +54,6 @@ const setClear: Ref<boolean> = ref(false)
         </button>
       </div>
     </div>
-    <!-- eslint-enable vuejs-accessibility/label-has-for vuejs-accessibility/form-control-has-label -->
+    <!-- eslint-enable vuejs-accessibility/form-control-has-label -->
   </section>
 </template>
