@@ -1,5 +1,5 @@
 <template>
-  <footer class="sticky bottom-0 z-90 border-t bg-$secondary">
+  <footer class="sticky bottom-0 z-2 border-t bg-$secondary">
     <div class="container mx-auto px-[16px] py-[8px] flex">
       <p>
         <a href="https://vitejs.dev/guide/features.html" target="_blank">Vite Docs</a> |

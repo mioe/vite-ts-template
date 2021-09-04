@@ -1,4 +1,5 @@
 @import '_root'
+@import '_anime'
 
 *,
 ::before,
@@ -12,6 +13,8 @@ body
   font-family: 'Rubik', sans-serif
   font-weight: 300
   color: var(--common)
+  &.is-blocked
+    overflow: hidden
 
 /* Components */
 @import '_buttons'

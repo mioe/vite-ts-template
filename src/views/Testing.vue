@@ -10,6 +10,7 @@
         <TestingDefaultClasses />
         <TestingForm />
         <TestingGetData />
+        <TestingModals />
         <TestingPinia />
         <TestingVitePluginIcons />
       </div>
