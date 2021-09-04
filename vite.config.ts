@@ -13,6 +13,8 @@ export default defineConfig(({ command, mode }) => {
   console.log('🦕 vite.config.ts/defineConfig', command, mode)
 
   return {
+    base: mode === 'development' ? './' : '/vite-ts-template/',
+
     resolve: {
       alias: {
         '@/': `${path.resolve(__dirname, 'src')}/`,
