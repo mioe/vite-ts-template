@@ -8,5 +8,6 @@
     <icon-carbon-language />
     <icon-carbon-dicom-overlay />
     <icon-carbon-logo-github />
+    <icon-carbon:chevron-down />
   </section>
 </template>

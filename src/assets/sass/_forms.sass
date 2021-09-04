@@ -1,6 +1,7 @@
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button
+input::-webkit-inner-spin-button,
+select
   -webkit-appearance: none
   margin: 0
 
@@ -10,9 +11,6 @@ input[type=number]
 
 select::-ms-expand
   display: none
-
-select
-  appearance: none
 
 input,
 textarea,
@@ -28,13 +26,13 @@ input[type=number]:not(.clear)
   @apply w-full min-h-[31px] px-[6px] bg-$primary border border-$primary font-light focus:outline-none focus:border-$rare
 
 select:not(.clear)
-  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="4" height="5"%3E%3Cpath fill="%23000" d="M2 0L0 2h4zm0 5L0 3h4z"/%3E%3C/svg%3E')
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"%3E%3Cpath d="M16 22L6 12l1.4-1.4l8.6 8.6l8.6-8.6L26 12z" fill="%23202124"%3E%3C/path%3E%3C/svg%3E')
   background-repeat: no-repeat
-  background-position-x: right .75rem
+  background-position-x: calc(100% - 10px)
   background-position-y: center
-  background-size: 8px 10px
-  @apply w-full h-[31px] leading-[28px] pl-[2px] pr-[8px] bg-$primary cursor-pointer border border-$primary font-light focus:outline-none focus:border-$rare rounded-none
+  background-size: 14px 14px
+  @apply w-full h-[31px] leading-[28px] pl-[2px] pr-[25px] bg-$primary cursor-pointer border border-$primary font-light focus:outline-none focus:border-$rare rounded-none
 
 html.dark
   select:not(.clear)
-    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="4" height="5"%3E%3Cpath fill="%23fff" d="M2 0L0 2h4zm0 5L0 3h4z"/%3E%3C/svg%3E')
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"%3E%3Cpath d="M16 22L6 12l1.4-1.4l8.6 8.6l8.6-8.6L26 12z" fill="%23e8eaed"%3E%3C/path%3E%3C/svg%3E')
