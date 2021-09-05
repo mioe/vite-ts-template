@@ -2,21 +2,22 @@
 
 const { dependencies, devDependencies } = require('../package.json')
 
-const nextPackage = (packageName) => {
-  const next = {
+const specialPackage = (packageName) => {
+  const specials = {
+    'vue-i18n': 'vue-i18n@next',
     'vue-router': 'vue-router@next',
     pinia: 'pinia@next',
     vue: 'vue@next',
   }
 
-  if (Object.keys(next).includes(packageName)) {
-    return next[packageName]
+  if (Object.keys(specials).includes(packageName)) {
+    return specials[packageName]
   }
   return packageName
 }
 
-const packages = Object.keys(dependencies).map(e => nextPackage(e))
-const devPackages = Object.keys(devDependencies)
+const packages = Object.keys(dependencies).map(e => specialPackage(e))
+const devPackages = Object.keys(devDependencies).map(e => specialPackage(e))
 
 // @ts-ignore
 await $`cd .. && yarn add ${packages}`

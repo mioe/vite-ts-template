@@ -13,6 +13,7 @@
         <TestingModals />
         <TestingPinia />
         <TestingVitePluginIcons />
+        <TestingVueI18n />
       </div>
     </div>
   </main>

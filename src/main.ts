@@ -6,6 +6,7 @@ import router from './router'
  * Plugins
  */
 import head from '@/plugins/vueuse-head'
+import i18n from '@/plugins/vue-i18n'
 import pinia from '@/plugins/pinia'
 
 /**
@@ -19,6 +20,7 @@ import '@/assets/sass/main.sass'
  */
 createApp(App)
   .use(pinia)
+  .use(i18n)
   .use(router)
   .use(head)
   .mount('#app')

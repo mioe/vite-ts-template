@@ -5,6 +5,7 @@ import WindiCSS from 'vite-plugin-windicss'
 import Components from 'unplugin-vue-components/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import { visualizer } from 'rollup-plugin-visualizer'
 
 
@@ -25,6 +26,11 @@ export default defineConfig(({ command, mode }) => {
 
       // https://github.com/antfu/vite-plugin-windicss
       WindiCSS(),
+
+      // https://github.com/intlify/vite-plugin-vue-i18n
+      VueI18n({
+        include: [path.resolve(__dirname, 'locales/**')],
+      }),
 
       // https://github.com/antfu/unplugin-vue-components
       Components({
