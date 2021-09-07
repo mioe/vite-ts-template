@@ -5,7 +5,7 @@
         Testing
       </h1>
 
-      <div class="space-y-[20px]">
+      <div class="space-y-[20px] pb-[40px]">
         <TestingColors />
         <TestingDefaultClasses />
         <TestingForm />
