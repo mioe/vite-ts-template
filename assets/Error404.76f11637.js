@@ -1,0 +1,1 @@
+import{_ as a}from"./index.17fff8ac.js";import{c as s,o as r,a as t}from"./vendor.682f5683.js";const e={},o={class:"relative"},n=[t("div",{class:"container mx-auto pt-[10px] px-[16px]"},[t("h1",{class:"text-2xl"}," 404 ")],-1)];var c=a(e,[["render",function(a,t){return r(),s("main",o,n)}]]);export{c as default};
