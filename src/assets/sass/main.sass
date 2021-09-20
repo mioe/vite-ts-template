@@ -4,17 +4,16 @@
 *,
 ::before,
 ::after
-  border-color: var(--default)
+  @apply border-$default
 
 html
-  background: var(--document)
+  @apply bg-$document
 
 body
   font-family: 'Rubik', sans-serif
-  font-weight: 300
-  color: var(--common)
+  @apply text-$common font-light
   &.is-blocked
-    overflow: hidden
+    @apply overflow-hidden
 
 /* Components */
 @import '_buttons'

@@ -27,11 +27,10 @@ input[type=number]:not(.clear)
 
 select:not(.clear)
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"%3E%3Cpath d="M16 22L6 12l1.4-1.4l8.6 8.6l8.6-8.6L26 12z" fill="%23202124"%3E%3C/path%3E%3C/svg%3E')
-  background-repeat: no-repeat
   background-position-x: calc(100% - 10px)
   background-position-y: center
   background-size: 14px 14px
-  @apply w-full h-[31px] leading-[28px] pl-[2px] pr-[25px] bg-$primary cursor-pointer border border-$primary font-light focus:outline-none focus:border-$rare rounded-none
+  @apply w-full h-[31px] leading-[28px] pl-[2px] pr-[25px] bg-$primary bg-no-repeat bg- cursor-pointer border border-$primary font-light focus:outline-none focus:border-$rare rounded-none
 
 html.dark
   select:not(.clear)
